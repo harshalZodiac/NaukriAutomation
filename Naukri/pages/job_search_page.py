@@ -11,6 +11,7 @@ class JobSearchPage:
         self.search_button = SEARCH_BUTTON
         self.freshness_filter = FILTER_FRESHNESS
         self.freshness_filter_last_single_day = FILTER_FRESHNESS_LAST_1_DAY
+        self.filters_applied = APPLIED_FILTERS
 
     def start_job_search(self):
         self.page.locator(self.job_search_start).click()
@@ -23,3 +24,5 @@ class JobSearchPage:
     def apply_freshness_filter(self):
         self.page.locator(self.freshness_filter).click()
         self.page.locator(self.freshness_filter_last_single_day).click()
+        self.page.locator(self.filters_applied).wait_for(state="visible")
+        assert self.page.locator(self.filters_applied).is_visible()
