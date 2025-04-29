@@ -1,5 +1,4 @@
 import time
-
 from pages.apply_page import JobApplyPage
 from pages.job_search_page import JobSearchPage
 from pages.login_page import LoginPage
@@ -17,9 +16,9 @@ class TestNaukriJobApply:
         job_search_page.search_job()
         job_search_page.apply_freshness_filter()
         page_number = page.locator(job_apply_page.job_apply_pagination)
-        for j in range(4):
-            page_number.nth(j).click()
+        for page_no in range(4):
+            page_number.nth(page_no).click()
             time.sleep(3)
             for i in range(-1, 20):
-                job_apply_page.open_first_job_post(i)
+                job_apply_page.apply_for_job(i)
                 time.sleep(2)

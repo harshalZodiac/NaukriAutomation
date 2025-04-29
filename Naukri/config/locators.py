@@ -23,3 +23,4 @@ QUESTION_2 = '//span[text()="How many years of Exp in Automation Python testing?
 QUESTION_3 = '//span[text()="How many years of total experience you have?"]'
 QUESTION_4 = '//span[text()="What is your expected CTC in Lakhs per annum?"]'
 JOB_APPLY_PAGINATION = 'div.styles_pages__v1rAK a'
+JOB_APPLY_SUCCESS = '[class="apply-message"]'

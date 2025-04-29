@@ -1,7 +1,9 @@
-import time
 from playwright.sync_api import Page
 from config.locators import *
-from config import settings
+from utils.helpers import *
+import settings
+import time
+
 
 class JobApplyPage:
     def __init__(self, page:Page):
@@ -16,15 +18,18 @@ class JobApplyPage:
         self.answer_placeholder = ANSWER_PLACEHOLDER
         self.job_already_applied = JOB_ALREADY_APPLIED
         self.job_apply_pagination = JOB_APPLY_PAGINATION
+        self.internal_job_apply_success = JOB_APPLY_SUCCESS
 
-    def open_first_job_post(self, job_index):
-        self.page.locator(self.job_posts).nth(job_index).click()
-
-        new_tab = self.page.context.wait_for_event("page")
+    def apply_for_job(self, job_index):
+        with self.page.context.expect_page() as new_tab_info:
+            self.page.locator(self.job_posts).nth(job_index).click()
+        new_tab = new_tab_info.value
         new_tab.wait_for_load_state("load")
 
         time.sleep(2)
         if new_tab.locator(self.apply_on_company_site_button).first.is_visible():
+            external_url = new_tab.url
+            save_external_link(external_url)
             new_tab.close()
             return
         if new_tab.locator(self.naukri_internal_apply).first.is_visible():
@@ -50,5 +55,7 @@ class JobApplyPage:
                 time.sleep(1)
                 new_tab.keyboard.press("Enter")
                 time.sleep(2)
+            if new_tab.locator(self.internal_job_apply_success).is_visible():
+                new_tab.close()
         if new_tab.locator(self.job_already_applied).first.is_visible():
             new_tab.close()

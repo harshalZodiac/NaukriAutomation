@@ -1,4 +1,4 @@
-from config import settings
+import settings
 from pages.login_page import LoginPage
 from pages.profile_page import ProfilePage
 

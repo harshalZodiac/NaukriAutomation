@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Adding the first job post open method">
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Applying to jobs">
+      <change afterPath="$PROJECT_DIR$/external_links.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/apply_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/job_search_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_job_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_job_apply.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +52,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor": "Run",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor": "Run",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor": "Run",
-    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor": "Run",
-    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor": "Run",
-    "Python tests.Python tests in test_login.py.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonProject\Naukri" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs">
     <configuration name="Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
@@ -185,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745774902186</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Applying to jobs">
+      <option name="closed" value="true" />
+      <created>1745855154262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745855154264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +220,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Adding the first job post open method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the first job post open method" />
+    <MESSAGE value="Applying to jobs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applying to jobs" />
   </component>
 </project>

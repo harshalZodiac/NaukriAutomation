@@ -1,4 +1,6 @@
 from playwright.sync_api import Page
+
+import settings
 from config.locators import *
 
 
@@ -17,8 +19,8 @@ class JobSearchPage:
         self.page.locator(self.job_search_start).click()
 
     def search_job(self):
-        self.page.locator(self.job_search_keyword).fill("Python Test Automation")
-        self.page.locator(self.job_search_location).fill("Bengaluru")
+        self.page.locator(self.job_search_keyword).fill(settings.JOB_SEARCH_TITLES)
+        self.page.locator(self.job_search_location).fill(settings.JOB_SEARCH_LOCATIONS)
         self.page.locator(self.search_button).click()
 
     def apply_freshness_filter(self):

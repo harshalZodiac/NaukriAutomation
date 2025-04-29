@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from config import settings
+import settings
 from config.locators import *
 
 
