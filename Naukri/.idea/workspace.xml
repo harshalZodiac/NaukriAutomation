@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Applying to jobs">
-      <change afterPath="$PROJECT_DIR$/external_links.txt" afterDir="false" />
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Applying to jobs 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/apply_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/job_search_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_job_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_job_apply.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745855154264</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Applying to jobs 2">
+      <option name="closed" value="true" />
+      <created>1745938704222</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745938704222</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +222,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Adding the first job post open method" />
     <MESSAGE value="Applying to jobs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applying to jobs" />
+    <MESSAGE value="Applying to jobs 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applying to jobs 2" />
   </component>
 </project>

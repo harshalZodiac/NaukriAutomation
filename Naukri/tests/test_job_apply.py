@@ -19,6 +19,6 @@ class TestNaukriJobApply:
         for page_no in range(4):
             page_number.nth(page_no).click()
             time.sleep(3)
-            for i in range(-1, 20):
+            for i in range(20):
                 job_apply_page.apply_for_job(i)
                 time.sleep(2)

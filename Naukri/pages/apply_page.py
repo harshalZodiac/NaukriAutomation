@@ -57,5 +57,8 @@ class JobApplyPage:
                 time.sleep(2)
             if new_tab.locator(self.internal_job_apply_success).is_visible():
                 new_tab.close()
-        if new_tab.locator(self.job_already_applied).first.is_visible():
-            new_tab.close()
+        # if new_tab.locator(self.job_already_applied).first.is_visible():
+        #     # external_url = new_tab.url
+        #     # save_internal_with_question_job_links(external_url)
+        #     new_tab.close()
+        #     # return
