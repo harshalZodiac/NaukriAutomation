@@ -1,0 +1,6 @@
+LINKEDIN_USERNAME = '[id="username"]'
+LINKEDIN_PASSWORD = '[id="password"]'
+LINKEDIN_SIGN_IN = '[aria-label="Sign in"]'
+LINKEDIN_FEED_PAGE_PROFILE_SECTION = '[class="profile-card-member-details"]'
+LINKEDIN_EDIT_BUTTON = '[href="#edit-medium"]'
+LINKEDIN_SAVE_PROFILE = '[data-view-name="profile-form-save"]'

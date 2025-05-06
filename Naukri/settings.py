@@ -8,3 +8,5 @@ TOTAL_YEARS_OF_EXPERIENCE = '4'                     # # How many years of total 
 EXPECTED_CTC = '15 LPA'                             # # What is your expected CTC in Lakhs per annum?
 JOB_SEARCH_TITLES = 'python test automation, Software testing, Automation testing, software developer engineer in test, '
 JOB_SEARCH_LOCATIONS = 'Pune, Bengaluru, Indore, India, '
+
+LINKEDIN_URL = 'https://www.linkedin.com/login'
