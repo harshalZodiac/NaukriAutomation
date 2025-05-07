@@ -64,6 +64,8 @@ class TestNaukriJobApply:
         job_search_page.start_job_search()
         job_search_page.search_job()
         job_search_page.apply_freshness_filter()
+        job_search_page.apply_role_category_filter()
+        job_search_page.apply_education_filter()
         page_number = page.locator(job_apply_page.job_apply_pagination)
         for page_no in range(4):
             page_number.nth(page_no).click()

@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Correcting job post iteration">
-      <change afterPath="$PROJECT_DIR$/config/linkedin_locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/linkedin_login_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/linkedin_profile_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_linkedin.py" afterDir="false" />
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Framework refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/apply_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/job_search_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_job_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_naukri.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_job_search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_naukri.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_naukri.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,32 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.test_linkedin_successful_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PythonProject/Naukri/tests&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor": "Run",
+    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor": "Run",
+    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor": "Run",
+    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor": "Run",
+    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor": "Run",
+    "Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.executor": "Run",
+    "Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.test_linkedin_successful_login.executor": "Run",
+    "Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit.executor": "Run",
+    "Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation.executor": "Run",
+    "Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor": "Run",
+    "Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor": "Run",
+    "Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor": "Run",
+    "Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply.executor": "Run",
+    "Python tests.Python tests in test_linkedin.py.executor": "Run",
+    "Python tests.Python tests in test_login.py.executor": "Run",
+    "Python tests.Python tests in test_naukri.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/PythonProject/Naukri/tests",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PythonProject\Naukri\tests" />
@@ -86,7 +85,7 @@
       <recent name="D:\PythonProject\Naukri" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_naukri.py">
+  <component name="RunManager" selected="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply">
     <configuration name="Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
@@ -102,7 +101,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +112,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation&quot;" />
+      <option name="_new_target" value="&quot;test_naukri.TestNaukriJobApply.test_naukri_apply&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -164,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_naukri.py" />
+        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" />
         <item itemvalue="Python tests.Python tests in test_linkedin.py" />
+        <item itemvalue="Python tests.Python tests in test_naukri.py" />
         <item itemvalue="Python tests.Python tests for tests.test_naukri.TestNaukriJobApply" />
         <item itemvalue="Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit" />
-        <item itemvalue="Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745983823413</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Framework refactor">
+      <option name="closed" value="true" />
+      <created>1746543174421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746543174421</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +254,7 @@
     <MESSAGE value="Applying to jobs" />
     <MESSAGE value="Applying to jobs 2" />
     <MESSAGE value="Correcting job post iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcting job post iteration" />
+    <MESSAGE value="Framework refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework refactor" />
   </component>
 </project>

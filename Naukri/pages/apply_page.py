@@ -11,14 +11,14 @@ class JobApplyPage:
         self.job_posts = JOB_POSTS
         self.apply_on_company_site_button = APPLY_ON_COMPANY_SITE_BUTTON
         self.naukri_internal_apply = NAUKRI_INTERNAL_APPLY_BUTTON
-        self.question_1 = QUESTION_1
-        self.question_2 = QUESTION_2
-        self.question_3 = QUESTION_3
-        self.question_4 = QUESTION_4
         self.answer_placeholder = ANSWER_PLACEHOLDER
         self.job_already_applied = JOB_ALREADY_APPLIED
         self.job_apply_pagination = JOB_APPLY_PAGINATION
         self.internal_job_apply_success = JOB_APPLY_SUCCESS
+        self.question_1 = QUESTION_1
+        self.question_2 = QUESTION_2
+        self.question_3 = QUESTION_3
+        self.question_4 = QUESTION_4
 
     def apply_for_job(self, job_index):
         with self.page.context.expect_page() as new_tab_info:
