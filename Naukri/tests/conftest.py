@@ -9,4 +9,4 @@ def page():
         context = browser.new_context(viewport=None)
         page = context .new_page()
         yield page
-        # browser.close()
+        browser.close()

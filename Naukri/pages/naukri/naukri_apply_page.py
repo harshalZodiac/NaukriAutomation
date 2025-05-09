@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from config.locators import *
+from config.naukri_locators import *
 from utils.helpers import *
 import settings
 import time
