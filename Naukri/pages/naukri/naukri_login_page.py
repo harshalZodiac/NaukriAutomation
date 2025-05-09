@@ -1,9 +1,9 @@
 from playwright.sync_api import Page
-import settings
 from config.locators import *
+import settings
 
 
-class LoginPage:
+class NaukriLoginPage:
     def __init__(self, page:Page):
         self.page = page
         self.login_button= LOGIN_BUTTON

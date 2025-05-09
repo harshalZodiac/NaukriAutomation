@@ -1,11 +1,10 @@
-import time
-
 from playwright.sync_api import Page
 from config.locators import *
 import settings
+import time
 import re
 
-class JobSearchPage:
+class NaukriJobSearchPage:
     def __init__(self, page:Page):
         self.page = page
         self.job_search_start = JOB_SEARCH_START

@@ -2,7 +2,7 @@ from playwright.sync_api import Page
 from config.locators import *
 
 
-class ProfilePage:
+class NaukriProfilePage:
     def __init__(self, page:Page):
         self.page = page
         self.view_profile_button = VIEW_PROFILE

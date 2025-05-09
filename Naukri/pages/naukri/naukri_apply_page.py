@@ -5,7 +5,7 @@ import settings
 import time
 
 
-class JobApplyPage:
+class NaukriJobApplyPage:
     def __init__(self, page:Page):
         self.page = page
         self.job_posts = JOB_POSTS

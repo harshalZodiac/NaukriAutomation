@@ -1,5 +1,5 @@
-from pages.linkedin_profile_page import LinkedinProfilePage
-from pages.linkedin_login_page import LinkedinLoginPage
+from pages.linkedin.linkedin_profile_page import LinkedinProfilePage
+from pages.linkedin.linkedin_login_page import LinkedinLoginPage
 import time
 
 
