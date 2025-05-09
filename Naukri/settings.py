@@ -4,8 +4,8 @@ NAUKRI_URL = "https://www.naukri.com/"
 USERNAME = "harshal.shinde1075@gmail.com"
 PASSWORD = "Harsh@555"
 
-JOB_SEARCH_TITLES = 'python test automation, Software testing, Automation testing, software developer engineer in test, '
-JOB_SEARCH_LOCATIONS = 'Pune, Bengaluru, Indore, India, '
+JOB_SEARCH_TITLES = 'SDET, python test automation, Software testing, Automation testing, software developer engineer in test, '
+JOB_SEARCH_LOCATIONS = 'Pune, Bengaluru, Indore, India, Hyderabad, '
 
 USER_FULL_NAME = "Harshal Suryakant Shinde"
 
