@@ -77,9 +77,7 @@ class TestNaukriJobApply:
         job_search_page.apply_education_filter()
         total_jobs = job_search_page.get_total_number_of_jobs()
         total_pages = math.ceil(total_jobs/20)
-        print(f"Total pages {total_pages}")
         second_last_page = total_pages - 1
-        print(f"Second last page {second_last_page}")
         last_page_jobs = (total_jobs - (second_last_page * 20))
 
         page_number = page.locator(job_apply_page.job_apply_pagination)
