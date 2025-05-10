@@ -61,7 +61,6 @@ class TestNaukriJobSearch:
         job_search_page.apply_freshness_filter()
         time.sleep(5)
 
-
 class TestNaukriJobApply:
 
     def test_naukri_apply(self, page):
