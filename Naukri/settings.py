@@ -7,6 +7,9 @@ PASSWORD = "Harsh@555"
 JOB_SEARCH_TITLES = 'SDET, python test automation, Software testing, Automation testing, software developer engineer in test, '
 JOB_SEARCH_LOCATIONS = 'Pune, Bengaluru, Indore, India, Hyderabad, '
 
+LINKEDIN_JOB_SEARCH_TITLES = 'SDET'
+LINKEDIN_JOB_SEARCH_LOCATIONS = 'India'
+
 USER_FULL_NAME = "Harshal Suryakant Shinde"
 
 YEARS_OF_EXPERIENCE_IN_PYTHON = '4'                 # # How much experience do you have in Python?
