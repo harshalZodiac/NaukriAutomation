@@ -1,3 +1,5 @@
+import math
+
 from pages.naukri.naukri_job_search_page import NaukriJobSearchPage
 from pages.naukri.naukri_profile_page import NaukriProfilePage
 from pages.naukri.naukri_apply_page import NaukriJobApplyPage
@@ -74,7 +76,10 @@ class TestNaukriJobApply:
         job_search_page.apply_role_category_filter()
         job_search_page.apply_education_filter()
         total_jobs = job_search_page.get_total_number_of_jobs()
-        second_last_page = int(total_jobs/20)
+        total_pages = math.ceil(total_jobs/20)
+        print(f"Total pages {total_pages}")
+        second_last_page = total_pages - 1
+        print(f"Second last page {second_last_page}")
         last_page_jobs = (total_jobs - (second_last_page * 20))
 
         page_number = page.locator(job_apply_page.job_apply_pagination)
@@ -82,10 +87,9 @@ class TestNaukriJobApply:
             page_number.nth(page_no).click()
             time.sleep(3)
             if page_no == second_last_page:
-                jobs_per_page = 20
-            else:
                 jobs_per_page = last_page_jobs
+            else:
+                jobs_per_page = 20
             for i in range(jobs_per_page):
                 job_apply_page.apply_for_job(i)
                 time.sleep(2)
-            print(page_no)
