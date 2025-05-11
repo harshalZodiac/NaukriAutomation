@@ -40,26 +40,6 @@ class NaukriJobApplyPage:
         if new_tab.locator(self.naukri_internal_apply).first.is_visible():
             new_tab.locator(self.naukri_internal_apply).first.click(force=True)
             time.sleep(2)
-            # if new_tab.locator(self.question_1).is_visible():
-            #     new_tab.locator(self.answer_placeholder).fill(settings.YEARS_OF_EXPERIENCE_IN_PYTHON)
-            #     time.sleep(1)
-            #     new_tab.keyboard.press("Enter")
-            #     time.sleep(2)
-            # if new_tab.locator(self.question_2).is_visible():
-            #     new_tab.locator(self.answer_placeholder).fill(settings.YEARS_OF_EXPERIENCE_IN_PYTHON_AUTOMATION)
-            #     time.sleep(1)
-            #     new_tab.keyboard.press("Enter")
-            #     time.sleep(2)
-            # if new_tab.locator(self.question_3).is_visible():
-            #     new_tab.locator(self.answer_placeholder).fill(settings.TOTAL_YEARS_OF_EXPERIENCE)
-            #     time.sleep(1)
-            #     new_tab.keyboard.press("Enter")
-            #     time.sleep(2)
-            # if new_tab.locator(self.question_4).is_visible():
-            #     new_tab.locator(self.answer_placeholder).fill(settings.EXPECTED_CTC)
-            #     time.sleep(1)
-            #     new_tab.keyboard.press("Enter")
-            #     time.sleep(2)
             question_answer_map = {
                 "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_PYTHON,
                 "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_PYTHON_AUTOMATION,
