@@ -41,14 +41,14 @@ class NaukriJobApplyPage:
             new_tab.locator(self.naukri_internal_apply).first.click(force=True)
             time.sleep(2)
             question_answer_map = {
-                "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_PYTHON,
-                "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_PYTHON_AUTOMATION,
-                "How many years of total experience you have?": settings.TOTAL_YEARS_OF_EXPERIENCE,
+                "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of total experience you have?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "What is your expected CTC in Lakhs per annum?": settings.EXPECTED_CTC,
                 "Please confirm your availability for Virtual interview on 17th May 2025?": settings.ANSWER_YES,
-                "How many years of experience do you have in Application Engineering?": settings.TOTAL_YEARS_OF_EXPERIENCE,
+                "How many years of experience do you have in Application Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "Are you open to work on contract?": settings.ANSWER_YES,
-                "How Many Years of exp you have in Data Engineering?": settings.TOTAL_YEARS_OF_EXPERIENCE,
+                "How Many Years of exp you have in Data Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "Expected CTC (Numeric Input Only)": settings.EXPECTED_CTC_NUMERIC,
                 "Current CTC (Numeric Input Only)": settings.CURRENT_CTC_NUMERIC,
                 "Notice Period": settings.NOTICE_PERIOD,
@@ -56,7 +56,7 @@ class NaukriJobApplyPage:
                 "Last Name": settings.LAST_NAME,
                 "Current Location": settings.CURRENT_LOCATION,
                 "Preferred Location": settings.CURRENT_LOCATION,
-                "How many years of Experience do you have in ETL resting?  ": settings.YEARS_OF_EXPERIENCE_IN_ETL,
+                "How many years of Experience do you have in ETL resting?  ": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
                 "Your KCET Rank: (Mention NA if not applicable)": settings.ANSWER_NOT_APPLICABLE
             }
 
