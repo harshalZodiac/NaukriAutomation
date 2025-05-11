@@ -12,7 +12,18 @@ LINKEDIN_JOB_SEARCH_LOCATIONS = 'India'
 
 USER_FULL_NAME = "Harshal Suryakant Shinde"
 
-YEARS_OF_EXPERIENCE_IN_PYTHON = '4'                 # # How much experience do you have in Python?
-YEARS_OF_EXPERIENCE_IN_PYTHON_AUTOMATION = '4'      # # How many years of Exp in Automation Python testing?
-TOTAL_YEARS_OF_EXPERIENCE = '4'                     # # How many years of total experience you have?
-EXPECTED_CTC = '15 LPA'                             # # What is your expected CTC in Lakhs per annum?
+YEARS_OF_EXPERIENCE_IN_PYTHON = '4'
+YEARS_OF_EXPERIENCE_IN_PYTHON_AUTOMATION = '4'
+TOTAL_YEARS_OF_EXPERIENCE = '4'
+EXPECTED_CTC = '15 LPA'
+CURRENT_CTC = '7 LPA'
+EXPECTED_CTC_NUMERIC = '1500000'
+CURRENT_CTC_NUMERIC = '700000'
+YEARS_OF_EXPERIENCE_IN_ETL = '2'
+ANSWER_YES = 'YES'
+ANSWER_NO = 'NO'
+ANSWER_NOT_APPLICABLE = 'NA'
+FIRST_NAME = 'Harshal'
+LAST_NAME = 'Shinde'
+CURRENT_LOCATION = 'Bengaluru, Karnataka'
+NOTICE_PERIOD = 'Immediately Available'
