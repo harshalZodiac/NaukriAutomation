@@ -1,4 +1,4 @@
-from config.linkedin_locators import *
+from config.locators_linkedin import *
 from playwright.sync_api import Page
 import settings
 
@@ -6,10 +6,10 @@ import settings
 class LinkedinLoginPage:
     def __init__(self, page:Page):
         self.page = page
-        self.linkedin_username_field= LINKEDIN_USERNAME
-        self.linkedin_password_field = LINKEDIN_PASSWORD
-        self.linkedin_sign_in_button = LINKEDIN_SIGN_IN
-        self.keep_me_signed_in = LINKEDIN_KEEP_ME_LOGGED_IN
+        self.linkedin_username_field= LinkedInLoginLocators.USERNAME
+        self.linkedin_password_field = LinkedInLoginLocators.PASSWORD
+        self.linkedin_sign_in_button = LinkedInLoginLocators.SIGN_IN
+        self.keep_me_signed_in = LinkedInLoginLocators.KEEP_ME_LOGGED_IN
 
     def login(self):
         self.page.goto(settings.LINKEDIN_URL)

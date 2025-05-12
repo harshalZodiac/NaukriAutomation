@@ -1,6 +1,6 @@
-from pages.linkedin.linkedin_job_apply import LinkedinJobApplyPage
-from pages.linkedin.linkedin_profile_page import LinkedinProfilePage
-from pages.linkedin.linkedin_login_page import LinkedinLoginPage
+from page_objects.linkedin.job_apply_page import LinkedinJobApplyPage
+from page_objects.linkedin.profile_page import LinkedinProfilePage
+from page_objects.linkedin.login_page import LinkedinLoginPage
 import time
 
 

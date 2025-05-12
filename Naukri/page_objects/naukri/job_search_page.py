@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from config.naukri_locators import *
+from config.locators_naukri import *
 import settings
 import time
 import re
@@ -7,19 +7,19 @@ import re
 class NaukriJobSearchPage:
     def __init__(self, page:Page):
         self.page = page
-        self.job_search_start = JOB_SEARCH_START
-        self.job_search_keyword = JOB_SEARCH_KEYWORD
-        self.job_search_location = JOB_SEARCH_LOCATION
-        self.job_search_experience = JOB_SEARCH_EXPERIENCE
-        self.role_category_filter = ROLE_CATEGORY
-        self.b_tech_education = B_TECH_EDUCATION
-        self.any_graduation_education = ANY_GRADUATION_EDUCATION
-        self.search_button = SEARCH_BUTTON
-        self.years_of_experience = YEARS_OF_EXPERIENCE
-        self.freshness_filter = FILTER_FRESHNESS
-        self.freshness_filter_last_single_day = FILTER_FRESHNESS_LAST_1_DAY
-        self.filters_applied = APPLIED_FILTERS
-        self.total_number_of_jobs_title = NO_OF_JOBS
+        self.job_search_start = NaukriJobSearchLocators.JOB_SEARCH_START
+        self.job_search_keyword = NaukriJobSearchLocators.JOB_SEARCH_KEYWORD
+        self.job_search_location = NaukriJobSearchLocators.JOB_SEARCH_LOCATION
+        self.job_search_experience = NaukriJobSearchLocators.JOB_SEARCH_EXPERIENCE
+        self.role_category_filter = NaukriJobSearchLocators.ROLE_CATEGORY
+        self.b_tech_education = NaukriJobSearchLocators.B_TECH_EDUCATION
+        self.any_graduation_education = NaukriJobSearchLocators.ANY_GRADUATION_EDUCATION
+        self.search_button = NaukriJobSearchLocators.SEARCH_BUTTON
+        self.years_of_experience = NaukriJobSearchLocators.YEARS_OF_EXPERIENCE
+        self.freshness_filter = NaukriJobSearchLocators.FILTER_FRESHNESS
+        self.freshness_filter_last_single_day = NaukriJobSearchLocators.FILTER_FRESHNESS_LAST_1_DAY
+        self.filters_applied = NaukriJobSearchLocators.APPLIED_FILTERS
+        self.total_number_of_jobs_title = NaukriJobSearchLocators.NO_OF_JOBS
 
     def start_job_search(self):
         self.page.locator(self.job_search_start).click()

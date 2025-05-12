@@ -1,15 +1,15 @@
 from playwright.sync_api import Page
-from config.naukri_locators import *
+from config.locators_naukri import *
 import settings
 
 
 class NaukriLoginPage:
     def __init__(self, page:Page):
         self.page = page
-        self.login_button= LOGIN_BUTTON
-        self.username_field= USERNAME_INPUT
-        self.password_field = PASSWORD_INPUT
-        self.submit_button = SUBMIT_BUTTON
+        self.login_button= NaukriLoginLocators.LOGIN_BUTTON
+        self.username_field= NaukriLoginLocators.USERNAME_INPUT
+        self.password_field = NaukriLoginLocators.PASSWORD_INPUT
+        self.submit_button = NaukriLoginLocators.SUBMIT_BUTTON
 
     def login(self):
         self.page.goto(settings.NAUKRI_URL)

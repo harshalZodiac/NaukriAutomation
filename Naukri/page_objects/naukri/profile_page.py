@@ -1,16 +1,16 @@
 from playwright.sync_api import Page
-from config.naukri_locators import *
+from config.locators_naukri import *
 
 
 class NaukriProfilePage:
     def __init__(self, page:Page):
         self.page = page
-        self.view_profile_button = VIEW_PROFILE
-        self.profile_name = PROFILE_NAME
-        self.profile_percentage_value = PROFILE_PERCENTAGE_VALUE
-        self.edit_general_profile = EDIT_GENERAL_PROFILE
-        self.save_general_profile_section = SAVE_GENERAL_PROFILE_SECTION
-        self.last_updated_today = LAST_UPDATED_PROFILE_TODAY
+        self.view_profile_button = NaukriProfileLocators.VIEW_PROFILE
+        self.profile_name = NaukriProfileLocators.PROFILE_NAME
+        self.profile_percentage_value = NaukriProfileLocators.PROFILE_PERCENTAGE_VALUE
+        self.edit_general_profile = NaukriProfileLocators.EDIT_GENERAL_PROFILE
+        self.save_general_profile_section = NaukriProfileLocators.SAVE_GENERAL_PROFILE_SECTION
+        self.last_updated_today = NaukriProfileLocators.LAST_UPDATED_PROFILE_TODAY
 
     def view_profile(self):
         self.page.locator(self.view_profile_button).click()

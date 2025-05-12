@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from config.naukri_locators import *
+from config.locators_naukri import *
 from utils.helpers import *
 import settings
 import time
@@ -8,18 +8,19 @@ import time
 class NaukriJobApplyPage:
     def __init__(self, page:Page):
         self.page = page
-        self.job_posts = JOB_POSTS
-        self.apply_on_company_site_button = APPLY_ON_COMPANY_SITE_BUTTON
-        self.naukri_internal_apply = NAUKRI_INTERNAL_APPLY_BUTTON
-        self.answer_placeholder = ANSWER_PLACEHOLDER
-        self.job_already_applied = JOB_ALREADY_APPLIED
-        self.job_apply_pagination = JOB_APPLY_PAGINATION
-        self.internal_job_apply_success = JOB_APPLY_SUCCESS
-        self.question_placeholder = QUESTION_PLACEHOLDER
-        self.i_am_interested = I_AM_INTERESTED
+        self.job_posts = NaukriJobApplicationLocators.JOB_POSTS
+        self.apply_on_company_site_button = NaukriJobApplicationLocators.APPLY_ON_COMPANY_SITE_BUTTON
+        self.naukri_internal_apply = NaukriJobApplicationLocators.NAUKRI_INTERNAL_APPLY_BUTTON
+        self.answer_placeholder = NaukriJobApplicationLocators.ANSWER_PLACEHOLDER
+        self.job_already_applied = NaukriJobApplicationLocators.JOB_ALREADY_APPLIED
+        self.job_apply_pagination = NaukriJobApplicationLocators.JOB_APPLY_PAGINATION
+        self.internal_job_apply_success = NaukriJobApplicationLocators.JOB_APPLY_SUCCESS
+        self.question_placeholder = NaukriJobApplicationLocators.QUESTION_PLACEHOLDER
+        self.i_am_interested = NaukriJobApplicationLocators.I_AM_INTERESTED
 
     def apply_for_job(self, job_index):
         with self.page.context.expect_page() as new_tab_info:
+            self.page.locator(self.job_posts).nth(job_index).wait_for(state="visible", timeout=10000)
             self.page.locator(self.job_posts).nth(job_index).click()
         new_tab = new_tab_info.value
         new_tab.wait_for_load_state("load")
@@ -38,6 +39,10 @@ class NaukriJobApplyPage:
             time.sleep(2)
             question_answer_map = {
                 "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience do you have in Manual Testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience do you have in Salesforce Testing?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
+                "How many years of experience do you have in Selenium Automation?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "What is your last working day?": settings.NOTICE_PERIOD,
                 "How many years of experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of total experience you have?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
@@ -51,6 +56,7 @@ class NaukriJobApplyPage:
                 "Expected CTC (Numeric Input Only)": settings.EXPECTED_CTC_NUMERIC,
                 "Current CTC (Numeric Input Only)": settings.CURRENT_CTC_NUMERIC,
                 "Notice Period": settings.NOTICE_PERIOD,
+                "What is your notice period?": settings.NOTICE_PERIOD,
                 "First Name": settings.FIRST_NAME,
                 "Last Name": settings.LAST_NAME,
                 "Current Location": settings.CURRENT_LOCATION,

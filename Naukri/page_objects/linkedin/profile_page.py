@@ -1,13 +1,13 @@
 from playwright.sync_api import Page
-from config.linkedin_locators import *
+from config.locators_linkedin import *
 
 
 class LinkedinProfilePage:
     def __init__(self, page:Page):
         self.page = page
-        self.feed_page_profile_section = LINKEDIN_FEED_PAGE_PROFILE_SECTION
-        self.edit_profile_section = LINKEDIN_EDIT_BUTTON
-        self.save_profile_section = LINKEDIN_SAVE_PROFILE
+        self.feed_page_profile_section = LinkedInProfileLocators.FEED_PAGE_PROFILE_SECTION
+        self.edit_profile_section = LinkedInProfileLocators.EDIT_BUTTON
+        self.save_profile_section = LinkedInProfileLocators.SAVE_PROFILE
 
     def view_linkedin_profile(self):
         self.page.locator(self.feed_page_profile_section).click()

@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from config.linkedin_locators import *
+from config.locators_linkedin import *
 import settings
 import time
 
@@ -7,20 +7,20 @@ import time
 class LinkedinJobApplyPage:
     def __init__(self, page:Page):
         self.page = page
-        self.job_apply_section = LINKEDIN_JOB_SECTION
-        self.job_search_input = LINKEDIN_JOB_TITLE
-        self.job_section_side_bar = LINKEDIN_JOB_SECTION_SIDE_BAR
-        self.date_posted_filter = DATE_POSTED_FILTER_OPTIONS
-        self.date_posted_last_one_day = DATE_POSTED_LAST_ONE_DAY
-        self.easy_apply_filter = EASY_APPLY_FILTER
-        self.apply_date_filter = APPLY_DATE_POSTED_FILTER
-        self.linkedin_job_post = LINKEDIN_JOB_POST
-        self.linkedin_job_apply = LINKEDIN_APPLY_BUTTON
-        self.next_button = NEXT_BUTTON
-        self.review_button = REVIEW_BUTTON
-        self.mandatory_not_filled_error = MANDATORY_NOT_FILLED_ERROR
-        self.submit_application_button = LINKEDIN_SUBMIT_APPLICATION
-        self.close_application_process = CLOSE_APPLICATION
+        self.job_apply_section = LinkedInJobSearchLocators.JOB_SECTION
+        self.job_search_input = LinkedInJobSearchLocators.JOB_TITLE
+        self.job_section_side_bar = LinkedInJobSearchLocators.JOB_SECTION_SIDE_BAR
+        self.date_posted_filter = LinkedInJobSearchLocators.DATE_POSTED_FILTER_OPTIONS
+        self.date_posted_last_one_day = LinkedInJobSearchLocators.DATE_POSTED_LAST_ONE_DAY
+        self.easy_apply_filter = LinkedInJobSearchLocators.EASY_APPLY_FILTER
+        self.apply_date_filter = LinkedInJobSearchLocators.APPLY_DATE_POSTED_FILTER
+        self.linkedin_job_post = LinkedInApplicationLocators.JOB_POST
+        self.linkedin_job_apply = LinkedInApplicationLocators.APPLY_BUTTON
+        self.next_button = LinkedInApplicationLocators.NEXT_BUTTON
+        self.review_button = LinkedInApplicationLocators.REVIEW_BUTTON
+        self.mandatory_not_filled_error = LinkedInApplicationLocators.MANDATORY_NOT_FILLED_ERROR
+        self.submit_application_button = LinkedInApplicationLocators.SUBMIT_APPLICATION
+        self.close_application_process = LinkedInApplicationLocators.CLOSE_APPLICATION
 
     def navigate_to_job_section(self):
         self.page.locator(self.job_apply_section).click()
