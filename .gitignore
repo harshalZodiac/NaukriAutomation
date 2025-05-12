@@ -1,0 +1,17 @@
+/Naukri/.venv/
+
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore PyCharm project files
+.idea/
+
+# Ignore specific file
+secrets.py
+
