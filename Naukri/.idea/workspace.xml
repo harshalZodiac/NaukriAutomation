@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Framework refactor">
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Building the Linkedin application methods">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/apply_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/job_search_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/naukri_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/naukri_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/naukri/naukri_apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/naukri/naukri_apply_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/naukri/naukri_job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/naukri/naukri_job_search_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_naukri.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_naukri.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,45 +48,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor": "Run",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor": "Run",
-    "Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor": "Run",
-    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor": "Run",
-    "Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor": "Run",
-    "Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.executor": "Run",
-    "Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.test_linkedin_successful_login.executor": "Run",
-    "Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit.executor": "Run",
-    "Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor": "Run",
-    "Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor": "Run",
-    "Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply.executor": "Run",
-    "Python tests.Python tests in test_linkedin.py.executor": "Run",
-    "Python tests.Python tests in test_login.py.executor": "Run",
-    "Python tests.Python tests in test_naukri.py.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/PythonProject/Naukri/tests",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print_jobs.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_apply_job_search_freshness_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_job_search.TestNaukriJobSearch.test_job_search_start.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin.TestLinkedinProfile.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin_login.TestLinkedinLogin.test_linkedin_successful_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_section_navigation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_successful_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_naukri.TestNaukriJobApply.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_naukri.TestNaukriLogin.test_update_profile_general_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_linkedin.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_naukri.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PythonProject/Naukri/tests&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PythonProject\Naukri\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonProject\Naukri\pages\naukri" />
+      <recent name="D:\PythonProject\Naukri\pages\linkedin" />
       <recent name="D:\PythonProject\Naukri" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply">
-    <configuration name="Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Naukri" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,7 +126,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit&quot;" />
+      <option name="_new_target" value="&quot;test_linkedin.TestLinkedinApply.test_linkedin_job_apply&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -113,21 +142,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_naukri.TestNaukriJobApply.test_naukri_apply&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_naukri.TestNaukriJobApply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Naukri" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_naukri.TestNaukriJobApply&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -164,17 +178,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" />
-        <item itemvalue="Python tests.Python tests in test_linkedin.py" />
         <item itemvalue="Python tests.Python tests in test_naukri.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_naukri.TestNaukriJobApply" />
-        <item itemvalue="Python tests.Python tests for test_linkedin_profile.TestLinkedinProfile.test_linkedin_profile_random_edit" />
+        <item itemvalue="Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" />
+        <item itemvalue="Python tests.Python tests in test_linkedin.py" />
+        <item itemvalue="Python.settings" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444" />
+        <option value="bundled-python-sdk-2ee2454479a3-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.122" />
       </set>
     </attachedChunks>
   </component>
@@ -234,7 +248,103 @@
       <option name="project" value="LOCAL" />
       <updated>1746543174421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Applying role category and education filters">
+      <option name="closed" value="true" />
+      <created>1746629726128</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746629726128</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updating the no of pages and job logic">
+      <option name="closed" value="true" />
+      <created>1746800409206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746800409206</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactoring page folder and renaming class">
+      <option name="closed" value="true" />
+      <created>1746802118914</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746802118914</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactoring page folder and renaming class-2">
+      <option name="closed" value="true" />
+      <created>1746802206570</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746802206570</updated>
+    </task>
+    <task id="LOCAL-00011" summary="selecting Linkedin job's">
+      <option name="closed" value="true" />
+      <created>1746859880326</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746859880326</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixing the page number logic">
+      <option name="closed" value="true" />
+      <created>1746897095373</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746897095373</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Removing print statements">
+      <option name="closed" value="true" />
+      <created>1746897132710</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746897132710</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updating indentation">
+      <option name="closed" value="true" />
+      <created>1746897295685</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746897295685</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updating questions and respected answers">
+      <option name="closed" value="true" />
+      <created>1746954208130</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746954208130</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updating questions and respected answers- 1">
+      <option name="closed" value="true" />
+      <created>1746954229347</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746954229347</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Reapplying filter role category">
+      <option name="closed" value="true" />
+      <created>1746968020769</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746968020769</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Building the Linkedin application methods">
+      <option name="closed" value="true" />
+      <created>1746976421774</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746976421774</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +365,18 @@
     <MESSAGE value="Applying to jobs 2" />
     <MESSAGE value="Correcting job post iteration" />
     <MESSAGE value="Framework refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework refactor" />
+    <MESSAGE value="Applying role category and education filters" />
+    <MESSAGE value="Updating the no of pages and job logic" />
+    <MESSAGE value="Refactoring page folder and renaming class" />
+    <MESSAGE value="Refactoring page folder and renaming class-2" />
+    <MESSAGE value="selecting Linkedin job's" />
+    <MESSAGE value="Fixing the page number logic" />
+    <MESSAGE value="Removing print statements" />
+    <MESSAGE value="updating indentation" />
+    <MESSAGE value="updating questions and respected answers" />
+    <MESSAGE value="updating questions and respected answers- 1" />
+    <MESSAGE value="Reapplying filter role category" />
+    <MESSAGE value="Building the Linkedin application methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building the Linkedin application methods" />
   </component>
 </project>

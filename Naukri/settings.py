@@ -28,4 +28,5 @@ FIRST_NAME = 'Harshal'
 LAST_NAME = 'Shinde'
 
 CURRENT_LOCATION = 'Bengaluru, Karnataka'
+CURRENT_LOCATION_IS_BANGALORE = 'Currently staying in bengaluru'
 NOTICE_PERIOD = 'Immediately Available'

@@ -17,10 +17,6 @@ class NaukriJobApplyPage:
         self.internal_job_apply_success = JOB_APPLY_SUCCESS
         self.question_placeholder = QUESTION_PLACEHOLDER
         self.i_am_interested = I_AM_INTERESTED
-        # self.question_1 = QUESTION_1
-        # self.question_2 = QUESTION_2
-        # self.question_3 = QUESTION_3
-        # self.question_4 = QUESTION_4
 
     def apply_for_job(self, job_index):
         with self.page.context.expect_page() as new_tab_info:
@@ -42,12 +38,15 @@ class NaukriJobApplyPage:
             time.sleep(2)
             question_answer_map = {
                 "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of total experience you have?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "What is your expected CTC in Lakhs per annum?": settings.EXPECTED_CTC,
                 "Please confirm your availability for Virtual interview on 17th May 2025?": settings.ANSWER_YES,
                 "How many years of experience do you have in Application Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "Are you open to work on contract?": settings.ANSWER_YES,
+                "Are you willing to work 4 days a week from Office?": settings.ANSWER_YES,
+                "Are you okay to relocate to bangalore": settings.CURRENT_LOCATION_IS_BANGALORE,
                 "How Many Years of exp you have in Data Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "Expected CTC (Numeric Input Only)": settings.EXPECTED_CTC_NUMERIC,
                 "Current CTC (Numeric Input Only)": settings.CURRENT_CTC_NUMERIC,
@@ -57,7 +56,8 @@ class NaukriJobApplyPage:
                 "Current Location": settings.CURRENT_LOCATION,
                 "Preferred Location": settings.CURRENT_LOCATION,
                 "How many years of Experience do you have in ETL resting?  ": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-                "Your KCET Rank: (Mention NA if not applicable)": settings.ANSWER_NOT_APPLICABLE
+                "Your KCET Rank: (Mention NA if not applicable)": settings.ANSWER_NOT_APPLICABLE,
+                "How many relevant years of experience into Python development?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE
             }
 
             while True:

@@ -29,7 +29,7 @@ class NaukriJobSearchPage:
         self.page.locator(self.job_search_location).fill(settings.JOB_SEARCH_LOCATIONS)
         self.page.locator(self.job_search_experience).click()
         self.page.locator(self.years_of_experience.format(
-            total_years_of_experience=settings.TOTAL_YEARS_OF_EXPERIENCE)).click()
+            total_years_of_experience=settings.YEARS_OF_EXPERIENCE_IN_CORE)).click()
         self.page.locator(self.search_button).click()
 
     def apply_freshness_filter(self):
