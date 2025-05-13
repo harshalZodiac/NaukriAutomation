@@ -12,6 +12,8 @@ class NaukriJobSearchPage:
         self.job_search_location = NaukriJobSearchLocators.JOB_SEARCH_LOCATION
         self.job_search_experience = NaukriJobSearchLocators.JOB_SEARCH_EXPERIENCE
         self.role_category_filter = NaukriJobSearchLocators.ROLE_CATEGORY
+        self.role_category_view_more = NaukriJobSearchLocators.ROLE_CATEGORY_VIEW_MORE
+        self.role_category_apply_filter = NaukriJobSearchLocators.APPLY_ROLE_CATEGORY_FILTER
         self.b_tech_education = NaukriJobSearchLocators.B_TECH_EDUCATION
         self.any_graduation_education = NaukriJobSearchLocators.ANY_GRADUATION_EDUCATION
         self.search_button = NaukriJobSearchLocators.SEARCH_BUTTON
@@ -38,8 +40,14 @@ class NaukriJobSearchPage:
         self.validate_number_of_filters_applied('2')
 
     def apply_role_category_filter(self):
+        self.page.wait_for_selector(self.role_category_view_more, state="visible")
+        self.page.locator(self.role_category_view_more).click(force=True)
+
         self.page.wait_for_selector(self.role_category_filter, state="visible")
-        self.page.locator(self.role_category_filter).click(force=True)
+        self.page.locator(self.role_category_filter).first.click(force=True)
+
+        self.page.wait_for_selector(self.role_category_apply_filter, state="visible")
+        self.page.locator(self.role_category_apply_filter).click(force=True)
         self.validate_number_of_filters_applied('5')
 
     def apply_education_filter(self):

@@ -26,6 +26,7 @@ ANSWER_NOT_APPLICABLE = 'NA'
 
 FIRST_NAME = 'Harshal'
 LAST_NAME = 'Shinde'
+DATE_OF_BIRTH = '29/12/1998'
 
 CURRENT_LOCATION = 'Bengaluru, Karnataka'
 CURRENT_LOCATION_IS_BANGALORE = 'Currently staying in bengaluru'
