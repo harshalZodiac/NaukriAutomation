@@ -39,6 +39,9 @@ class NaukriJobApplyPage:
             time.sleep(2)
             question_answer_map = {
                 "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience you have in API?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience do you have in Automation Test Framework?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
+                "How many years of experience you have Postman?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of experience you have in Selenium?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of experience do you have in Api Automation?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "How many years of exp in python coding": settings.YEARS_OF_EXPERIENCE_IN_CORE,
@@ -54,6 +57,7 @@ class NaukriJobApplyPage:
                 "Please confirm your availability for Virtual interview on 17th May 2025?": settings.ANSWER_YES,
                 "How many years of experience do you have in Application Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
                 "Are you open to work on contract?": settings.ANSWER_YES,
+                "Are you willing to relocate to Pune to work in Hybrid mode on direct payroll with my client ?": settings.ANSWER_YES,
                 "Do you have PF in your current company?": settings.ANSWER_YES,
                 "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?": settings.ANSWER_YES,
                 "Are you willing to work 4 days a week from Office?": settings.ANSWER_YES,
