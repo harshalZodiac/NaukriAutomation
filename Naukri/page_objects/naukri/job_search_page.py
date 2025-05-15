@@ -43,8 +43,8 @@ class NaukriJobSearchPage:
         self.page.wait_for_selector(self.role_category_view_more, state="visible")
         self.page.locator(self.role_category_view_more).click(force=True)
 
-        self.page.wait_for_selector(self.role_category_filter, state="visible")
-        self.page.locator(self.role_category_filter).first.click(force=True)
+        self.page.wait_for_selector(self.role_category_filter.format(role_category=settings.ROLE_CATEGORY_SECTION), state="visible")
+        self.page.locator(self.role_category_filter.format(role_category=settings.ROLE_CATEGORY_SECTION)).first.click(force=True)
 
         self.page.wait_for_selector(self.role_category_apply_filter, state="visible")
         self.page.locator(self.role_category_apply_filter).click(force=True)

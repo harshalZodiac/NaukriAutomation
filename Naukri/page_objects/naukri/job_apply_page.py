@@ -37,47 +37,6 @@ class NaukriJobApplyPage:
         if new_tab.locator(self.naukri_internal_apply).first.is_visible():
             new_tab.locator(self.naukri_internal_apply).first.click(force=True)
             time.sleep(2)
-            question_answer_map = {
-                "How much experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience you have in API?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience do you have in Automation Test Framework?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience you have Postman?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience you have in Selenium?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience do you have in Api Automation?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of exp in python coding": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience do you have in Manual Testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience do you have in Salesforce Testing?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-                "How many years of experience do you have in Selenium Automation?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of experience do you have in Javascript?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-                "What is your last working day?": settings.NOTICE_PERIOD,
-                "How many years of experience do you have in Python?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of Exp in Automation Python testing?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "How many years of total experience you have?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "What is your expected CTC in Lakhs per annum?": settings.EXPECTED_CTC,
-                "Please confirm your availability for Virtual interview on 17th May 2025?": settings.ANSWER_YES,
-                "How many years of experience do you have in Application Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "Are you open to work on contract?": settings.ANSWER_YES,
-                "Are you willing to relocate to Pune to work in Hybrid mode on direct payroll with my client ?": settings.ANSWER_YES,
-                "Do you have PF in your current company?": settings.ANSWER_YES,
-                "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?": settings.ANSWER_YES,
-                "Are you willing to work 4 days a week from Office?": settings.ANSWER_YES,
-                "Are you okay to relocate to bangalore": settings.CURRENT_LOCATION_IS_BANGALORE,
-                "How Many Years of exp you have in Data Engineering?": settings.YEARS_OF_EXPERIENCE_IN_CORE,
-                "Expected CTC (Numeric Input Only)": settings.EXPECTED_CTC_NUMERIC,
-                "What is your expected annual CTC in INR ?": settings.EXPECTED_CTC_NUMERIC,
-                "Current CTC (Numeric Input Only)": settings.CURRENT_CTC_NUMERIC,
-                "What is your current annual CTC in INR ?": settings.CURRENT_CTC_NUMERIC,
-                "Notice Period": settings.NOTICE_PERIOD,
-                "What is your notice period?": settings.NOTICE_PERIOD,
-                "First Name": settings.FIRST_NAME,
-                "Date of Birth": settings.DATE_OF_BIRTH,
-                "Last Name": settings.LAST_NAME,
-                "Current Location": settings.CURRENT_LOCATION,
-                "Preferred Location": settings.CURRENT_LOCATION,
-                "How many years of Experience do you have in ETL resting?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-                "How many years of experience do you have in Mobile Testing?  ": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-                "How many relevant years of experience into Python development?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE
-            }
 
             while True:
                 try:
@@ -88,7 +47,7 @@ class NaukriJobApplyPage:
                         break
 
                     question_text = question_locator.inner_text().strip()
-                    answer = question_answer_map.get(question_text)
+                    answer = settings.question_answer_map.get(question_text)
 
                     if question_text == "Thank you for your responses.":
                         print("[Info] End of section detected.")
