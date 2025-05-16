@@ -30,6 +30,8 @@ ANSWER_NOT_APPLICABLE = 'NA'
 FIRST_NAME = 'Harshal'
 LAST_NAME = 'Shinde'
 DATE_OF_BIRTH = '29/12/1998'
+GENDER = 'Male'
+COUNTRY_CODE = '+91'
 
 CURRENT_LOCATION = 'Bengaluru, Karnataka'
 CURRENT_LOCATION_IS_BANGALORE = 'Currently staying in bengaluru'
@@ -38,9 +40,16 @@ NOTICE_PERIOD = 'Immediately Available'
 ROLE_CATEGORY_SECTION = 'Quality Assurance and Testing'  ## Dev 'Software Development'
 
 question_answer_map = {
-    "How much experience do you have in Python?": YEARS_OF_EXPERIENCE_IN_CORE,
-    "How many years of experience do you have in Pytest?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of experience do you have in Android Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "Gender": GENDER,
+    "How many years of experience do you have in Java Selenium?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of experience do you have in cypress?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of experience do you have working in the aerospace domain?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "Country Code": COUNTRY_CODE,
+    "How many years of experience do you have as a Software Tester?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of experience do you have in Mainframes?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in Ui Automation?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of experience do you have in playwright?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in Automation?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in Selenium?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience you have in API?": YEARS_OF_EXPERIENCE_IN_CORE,
@@ -62,15 +71,20 @@ question_answer_map = {
     "How many years of experience do you have in Application Engineering?": YEARS_OF_EXPERIENCE_IN_CORE,
     "Are you open to work on contract?": ANSWER_YES,
     "Are you willing to relocate to Pune to work in Hybrid mode on direct payroll with my client ?": ANSWER_YES,
+    "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?": ANSWER_YES,
+    "This is a work from office opportunity. Are you willing to work full-time out of our office in Hebbal, Bangalore?": ANSWER_YES,
     "Do you have PF in your current company?": ANSWER_YES,
     "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?": ANSWER_YES,
     "Are you currently residing in Gurugram, Haryana or willing to relocate to Gurugram, Haryana?": ANSWER_YES,
     "Are you willing to work 4 days a week from Office?": ANSWER_YES,
+    "Are you ready to work on C2H Role?": ANSWER_YES,
     "Are you okay to relocate to bangalore": CURRENT_LOCATION_IS_BANGALORE,
     "How Many Years of exp you have in Data Engineering?": YEARS_OF_EXPERIENCE_IN_CORE,
     "Expected CTC (Numeric Input Only)": EXPECTED_CTC_FULL_NUMERIC,
+    "Expected CTC (Numeric Inputs Only)": EXPECTED_CTC_FULL_NUMERIC,
     "What is your expected annual CTC in INR ?": EXPECTED_CTC_FULL_NUMERIC,
     "Current CTC (Numeric Input Only)": CURRENT_CTC_FULL_NUMERIC,
+    "Current CTC (Numeric Inputs Only)": CURRENT_CTC_FULL_NUMERIC,
     "What is your expected CTC per annum in lakhs? (Mention Only Number) (For e.g. 10)": EXPECTED_CTC_NUMERIC,
     "What is your current CTC per annum in lakhs? (Mention Only Number) (For e.g. 10)": CURRENT_CTC_NUMERIC,
     "What is your current annual CTC in INR ?": CURRENT_CTC_FULL_NUMERIC,
