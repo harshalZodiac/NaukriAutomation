@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Building the Linkedin application methods">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Added few more questions 3">
+      <change afterPath="$PROJECT_DIR$/iwfm_pipeline.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/naukri_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/naukri_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/naukri/naukri_apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/naukri/naukri_apply_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/naukri/naukri_job_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/naukri/naukri_job_search_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_naukri.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_naukri.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_apply_first_twenty_jobs.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_job_apply.TestNaukriJobApply.test_print.executor&quot;: &quot;Run&quot;,
@@ -93,28 +89,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply">
-    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Naukri" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/settings.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
@@ -127,6 +101,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_linkedin.TestLinkedinApply.test_linkedin_job_apply&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_naukri.TestNaukriJobApply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Naukri" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_naukri.TestNaukriJobApply&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -179,9 +168,9 @@
       <list>
         <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" />
         <item itemvalue="Python tests.Python tests in test_naukri.py" />
-        <item itemvalue="Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" />
         <item itemvalue="Python tests.Python tests in test_linkedin.py" />
-        <item itemvalue="Python.settings" />
+        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply" />
+        <item itemvalue="Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" />
       </list>
     </recent_temporary>
   </component>
@@ -344,7 +333,71 @@
       <option name="project" value="LOCAL" />
       <updated>1746976421774</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Removing commented code">
+      <option name="closed" value="true" />
+      <created>1747022450886</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1747022450886</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updating git ignore">
+      <option name="closed" value="true" />
+      <created>1747022842235</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1747022842235</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Moving locators to class">
+      <option name="closed" value="true" />
+      <created>1747054802972</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1747054802972</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Handling role category filter correctly">
+      <option name="closed" value="true" />
+      <created>1747145422370</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1747145422370</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added few more questions">
+      <option name="closed" value="true" />
+      <created>1747232694716</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747232694716</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added few more questions 1">
+      <option name="closed" value="true" />
+      <created>1747313478999</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747313478999</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added few more questions 2">
+      <option name="closed" value="true" />
+      <created>1747372618388</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747372618388</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added few more questions 3">
+      <option name="closed" value="true" />
+      <created>1747373982021</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747373982021</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Adding the first job post open method" />
     <MESSAGE value="Applying to jobs" />
     <MESSAGE value="Applying to jobs 2" />
@@ -377,6 +429,14 @@
     <MESSAGE value="updating questions and respected answers- 1" />
     <MESSAGE value="Reapplying filter role category" />
     <MESSAGE value="Building the Linkedin application methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Building the Linkedin application methods" />
+    <MESSAGE value="Removing commented code" />
+    <MESSAGE value="updating git ignore" />
+    <MESSAGE value="Moving locators to class" />
+    <MESSAGE value="Handling role category filter correctly" />
+    <MESSAGE value="Added few more questions" />
+    <MESSAGE value="Added few more questions 1" />
+    <MESSAGE value="Added few more questions 2" />
+    <MESSAGE value="Added few more questions 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added few more questions 3" />
   </component>
 </project>

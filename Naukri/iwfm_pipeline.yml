@@ -1,0 +1,86 @@
+# Azure DevOps Pipeline for naukri API UI Automation
+# This pipeline runs daily at 4 AM IST and supports parameterized test execution
+
+trigger:
+  branches:
+    include:
+      - Naukri_API_UI_Automation
+
+schedules:
+  - cron: "30 22 * * *"  # Runs at 4 AM IST (22:30 UTC)
+    displayName: Daily 4 AM IST
+    branches:
+      include:
+        - naukri_API_UI_Automation
+    always: true
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+parameters:
+  - name: test_plan_id
+    displayName: Enter TestPlanID
+    type: string
+    default: '342900'
+
+  - name: test_suite_id
+    displayName: Enter TestSuiteID
+    type: string
+    default: '342901'
+
+  - name: env_name
+    displayName: Enter Environment Name
+    type: string
+    default: 'qe'
+    values:
+      - qe
+      - dev
+      - new
+
+  - name: env_base_url
+    displayName: Base URL for 'new' environment
+    type: string
+    default: 'http://placeholder-url.com'
+
+jobs:
+  - job: RunTests
+    displayName: 'naukri API Test'
+    timeoutInMinutes: 30
+
+    steps:
+      - script: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        displayName: 'Install Dependencies'
+
+      - script: |
+          echo "Current working directory: $(System.DefaultWorkingDirectory)"
+          export PYTHONPATH=$(System.DefaultWorkingDirectory)
+          echo "PYTHONPATH: $PYTHONPATH"
+
+          if [ "${{ parameters.env_name }}" = "new" ]; then
+            if [ -z "${{ parameters.env_base_url }}" ] || [ "${{ parameters.env_base_url }}" = "http://placeholder-url.com" ]; then
+              echo "ERROR: A valid env base url must be provided when env_name is 'new'"
+              exit 1
+            fi
+            export BASE_URL="${{ parameters.env_base_url }}"
+            export ENV="new"
+          else
+            export ENV="${{ parameters.env_name }}"
+            echo "Using ENV: $ENV"
+          fi
+
+          pytest --junitxml=pytest-results.xml tests/api
+        displayName: 'Run API Tests'
+
+      - task: PublishTestResults@2
+        inputs:
+          testResultsFiles: 'pytest-results.xml'
+          testRunTitle: 'Pytest naukri API Test Results'
+        condition: succeededOrFailed()
+        displayName: 'Publish Test Results'
+
+      - script: |
+          python $(System.DefaultWorkingDirectory)/test_plan_update/update_test_results.py             ${{ parameters.test_plan_id }}             ${{ parameters.test_suite_id }}
+        displayName: 'Update Test Results to Azure DevOps'
+        condition: succeededOrFailed()
