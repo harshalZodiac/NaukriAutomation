@@ -42,7 +42,10 @@ ROLE_CATEGORY_SECTION = 'Quality Assurance and Testing'  ## Dev 'Software Develo
 question_answer_map = {
     "How many years of experience do you have in Android Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in Mainframe Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of experience do you have in Java?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in python automation?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of experience do you have in Rest Assured?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of experience do you have in embedded software development and testing for aerospace products?": YEARS_OF_EXPERIENCE_IN_CORE,
     "Notice Period (In Days)": NOTICE_PERIOD,
     "What is your notice period? How soon can you take up this role ?": NOTICE_PERIOD,
     "How many years of experience do you have in Java Selenium?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
