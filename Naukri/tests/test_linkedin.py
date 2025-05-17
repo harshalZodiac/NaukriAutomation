@@ -8,7 +8,7 @@ class TestLinkedinLogin:
 
     def test_linkedin_successful_login(self, browser_page):
         linkedin_login_page = LinkedinLoginPage(browser_page)
-        linkedin_login_page.login()
+        linkedin_login_page.login_to_linkedin_application()
         time.sleep(5)
 
 
@@ -18,7 +18,7 @@ class TestLinkedinProfile:
         linkedin_login_page = LinkedinLoginPage(browser_page)
         linkedin_profile_page = LinkedinProfilePage(browser_page)
 
-        linkedin_login_page.login()
+        linkedin_login_page.login_to_linkedin_application()
         linkedin_profile_page.view_linkedin_profile()
         time.sleep(5)
 
@@ -26,7 +26,7 @@ class TestLinkedinProfile:
         linkedin_login_page = LinkedinLoginPage(browser_page)
         linkedin_profile_page = LinkedinProfilePage(browser_page)
 
-        linkedin_login_page.login()
+        linkedin_login_page.login_to_linkedin_application()
         linkedin_profile_page.view_linkedin_profile()
         linkedin_profile_page.edit_linkedin_profile()
         time.sleep(5)
@@ -38,7 +38,7 @@ class TestLinkedinApply:
         linkedin_profile_page = LinkedinProfilePage(browser_page)
         linkedin_apply_page = LinkedinJobApplyPage(browser_page)
 
-        linkedin_login_page.login()
+        linkedin_login_page.login_to_linkedin_application()
         linkedin_profile_page.view_linkedin_profile()
         linkedin_apply_page.navigate_to_job_section()
         linkedin_apply_page.provide_job_search_input()

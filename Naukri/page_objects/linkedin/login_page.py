@@ -11,10 +11,13 @@ class LinkedinLoginPage:
         self.linkedin_sign_in_button = LinkedInLoginLocators.SIGN_IN
         self.keep_me_signed_in = LinkedInLoginLocators.KEEP_ME_LOGGED_IN
 
-    def login(self):
+    def login_to_linkedin_application(self):
         self.page.goto(settings.LINKEDIN_URL)
         self.page.locator(self.linkedin_username_field).fill(settings.USERNAME)
         self.page.locator(self.linkedin_password_field).fill(settings.PASSWORD)
-        self.page.locator(self.keep_me_signed_in).evaluate("checkbox => checkbox.checked = false")
+        try:
+            self.page.locator(self.keep_me_signed_in).evaluate("checkbox => checkbox.checked = false")
+        except Exception as e:
+            print(f"Check box not visible: {e}")
         self.page.locator(self.linkedin_sign_in_button).click()
 
