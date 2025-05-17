@@ -40,10 +40,14 @@ NOTICE_PERIOD = 'Immediately Available'
 ROLE_CATEGORY_SECTION = 'Quality Assurance and Testing'  ## Dev 'Software Development'
 
 question_answer_map = {
+    "How many years of work experience do you have with Embedded Systems?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    " How many years of experience do you have in Robot Framework?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of work experience do you have with Python (Programming Language)?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in Android Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in Mainframe Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in Java?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in python automation?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "Total Experience?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in Rest Assured?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in embedded software development and testing for aerospace products?": YEARS_OF_EXPERIENCE_IN_CORE,
     "Notice Period (In Days)": NOTICE_PERIOD,
@@ -75,6 +79,8 @@ question_answer_map = {
     "Please confirm your availability for Virtual interview on 17th May 2025?": ANSWER_YES,
     "How many years of experience do you have in Application Engineering?": YEARS_OF_EXPERIENCE_IN_CORE,
     "Are you open to work on contract?": ANSWER_YES,
+    "do you have good experience in python?": ANSWER_YES,
+    "Are you open to work in 10:00 AM To 07:00 PM for this job?": ANSWER_YES,
     "Are you willing to relocate to Pune to work in Hybrid mode on direct payroll with my client ?": ANSWER_YES,
     "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?": ANSWER_YES,
     "This is a work from office opportunity. Are you willing to work full-time out of our office in Hebbal, Bangalore?": ANSWER_YES,

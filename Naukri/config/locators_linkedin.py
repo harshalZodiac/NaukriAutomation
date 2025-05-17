@@ -26,3 +26,4 @@ class LinkedInApplicationLocators:
     REVIEW_BUTTON = '//span[@class="artdeco-button__text" and text()="Review"]'
     SUBMIT_APPLICATION = '//span[@class="artdeco-button__text" and text()="Submit application"]'
     CLOSE_APPLICATION = '[data-test-icon="close-medium"]'
+    DONE_WITH_APPLICATION = '//span[text()="Done"]'

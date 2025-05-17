@@ -21,6 +21,7 @@ class LinkedinJobApplyPage:
         self.mandatory_not_filled_error = LinkedInApplicationLocators.MANDATORY_NOT_FILLED_ERROR
         self.submit_application_button = LinkedInApplicationLocators.SUBMIT_APPLICATION
         self.close_application_process = LinkedInApplicationLocators.CLOSE_APPLICATION
+        self.done_with_application = LinkedInApplicationLocators.DONE_WITH_APPLICATION
 
     def navigate_to_job_section(self):
         self.page.locator(self.job_apply_section).click()
@@ -49,11 +50,7 @@ class LinkedinJobApplyPage:
         self.page.locator(self.linkedin_job_apply).first.wait_for(state="visible")
         self.page.locator(self.linkedin_job_apply).first.click()
 
-        linkedin_question_answer_map = {
-            "How many years of work experience do you have with Embedded Systems?": settings.YEARS_OF_EXPERIENCE_IN_NON_CORE,
-            "How many years of work experience do you have with Python (Programming Language)?": settings.YEARS_OF_EXPERIENCE_IN_CORE
-        }
-
+        time.sleep(1.5)
         while True:
             try:
                 if self.page.locator(self.review_button).is_visible():
@@ -62,6 +59,9 @@ class LinkedinJobApplyPage:
                 if self.page.locator(self.submit_application_button).is_visible():
                     self.page.locator(self.submit_application_button).click()
                     time.sleep(2)
+                    self.page.locator(self.done_with_application).wait_for(state="visible")
+                    self.page.locator(self.done_with_application).first.click()
+                    break
                 elif self.page.locator(self.next_button).count() > 0:
                     next_btn = self.page.locator(self.next_button).first
                     next_btn.wait_for(state="visible")
@@ -71,33 +71,34 @@ class LinkedinJobApplyPage:
                         time.sleep(1.5)
                     else:
                         print("[Warning] 'Next' button found but not enabled.")
+
+                error_icons_locators = self.page.locator(self.mandatory_not_filled_error)
+                error_icons_count = error_icons_locators.count()
+                if error_icons_count > 0:
+                    for i in range(error_icons_count):
+                        icon = error_icons_locators.nth(i)
+                        container = icon.locator("xpath=ancestor::div[contains(@class, 'fb-dash-form-element')]")
+
+                        label = container.locator("label").first
+                        input_field = container.locator("input, textarea").first
+
+                        if not label.is_visible() or not input_field.is_visible():
+                            continue
+
+                        question = label.inner_text().strip()
+                        answer = settings.question_answer_map.get(question)
+
+                        if answer:
+                            input_field.fill(answer)
+                            print(f"[Info] Filled answer for: {question}")
+                        else:
+                            print(f"[Unmapped Question] '{question}' - Skipping this job.")
+                            self.page.locator(self.close_application_process).first.click()
+                            time.sleep(1)
+                            return
                 else:
                     print("[Info] No navigation button found. Exiting.")
-                    break
-
-                error_icons = self.page.locator(self.mandatory_not_filled_error)
-                for i in range(error_icons.count()):
-                    icon = error_icons.nth(i)
-                    container = icon.locator("xpath=ancestor::div[contains(@class, 'fb-dash-form-element')]")
-
-                    label = container.locator("label").first
-                    input_field = container.locator("input, textarea").first
-
-                    if not label.is_visible() or not input_field.is_visible():
-                        continue
-
-                    question = label.inner_text().strip()
-                    answer = linkedin_question_answer_map.get(question)
-
-                    if answer:
-                        input_field.fill(answer)
-                        print(f"[Info] Filled answer for: {question}")
-                    else:
-                        print(f"[Unmapped Question] '{question}' - Skipping this job.")
-                        self.page.locator(self.close_application_process).click()
-                        time.sleep(1)
-                        return
-                time.sleep(1.5)
+                    # break
 
             except Exception as e:
                 print(f"[Error] Exception during application process: {e}")

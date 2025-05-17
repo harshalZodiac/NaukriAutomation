@@ -1,3 +1,4 @@
+from page_objects.linkedin.job_apply_page import LinkedinJobApplyPage
 from page_objects.linkedin.profile_page import LinkedinProfilePage
 from page_objects.linkedin.login_page import LinkedinLoginPage
 import time
@@ -46,4 +47,4 @@ class TestLinkedinProfile:
 #         for i in range(25):
 #             linkedin_apply_page.apply_linkedin_jobs(i)
 #         time.sleep(5)
-
+#
