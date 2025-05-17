@@ -33,15 +33,27 @@ DATE_OF_BIRTH = '29/12/1998'
 GENDER = 'Male'
 COUNTRY_CODE = '+91'
 
-CURRENT_LOCATION = 'Bengaluru, Karnataka'
+CURRENT_LOCATION = 'Bengaluru, Karnataka, India'
 CURRENT_LOCATION_IS_BANGALORE = 'Currently staying in bengaluru'
 NOTICE_PERIOD = 'Immediately Available'
 
 ROLE_CATEGORY_SECTION = 'Quality Assurance and Testing'  ## Dev 'Software Development'
 
 question_answer_map = {
+    "How many years of work experience do you have with QA Engineering?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of work experience do you have with Appium?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "What are your years of experience?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "What is your official notice period ?": NOTICE_PERIOD,
+    "Location (city)": CURRENT_LOCATION,
+    "How many years of experience do you have as an Python Automation Engineer?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "How many years of work experience do you have with Cypress/javascript/playwright? MUST REFLECT IN RESUME.": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of work experience do you have with VBScript?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of Information Technology and Services experience do you currently have?": YEARS_OF_EXPERIENCE_IN_CORE,
+    "What is your current annual salary in INR?": CURRENT_CTC_FULL_NUMERIC,
+    "How many years of work experience do you have with AWS Lambda?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "What is your expected CTC salary in Lakh Per Annum (that will have PF and TDS deductions)?": EXPECTED_CTC_NUMERIC,
     "How many years of work experience do you have with Embedded Systems?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
-    " How many years of experience do you have in Robot Framework?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
+    "How many years of experience do you have in Robot Framework?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of work experience do you have with Python (Programming Language)?": YEARS_OF_EXPERIENCE_IN_CORE,
     "How many years of experience do you have in Android Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
     "How many years of experience do you have in Mainframe Testing?": YEARS_OF_EXPERIENCE_IN_NON_CORE,
@@ -97,7 +109,9 @@ question_answer_map = {
     "Current CTC (Numeric Input Only)": CURRENT_CTC_FULL_NUMERIC,
     "Current CTC (Numeric Inputs Only)": CURRENT_CTC_FULL_NUMERIC,
     "What is your expected CTC per annum in lakhs? (Mention Only Number) (For e.g. 10)": EXPECTED_CTC_NUMERIC,
+    "What is your expected cost to company? (Please mention in LPA)": EXPECTED_CTC_NUMERIC,
     "What is your current CTC per annum in lakhs? (Mention Only Number) (For e.g. 10)": CURRENT_CTC_NUMERIC,
+    "What is your current cost to company? (Please mention in LPA)": CURRENT_CTC_NUMERIC,
     "What is your current annual CTC in INR ?": CURRENT_CTC_FULL_NUMERIC,
     "Notice Period": NOTICE_PERIOD,
     "What is your notice period?": NOTICE_PERIOD,

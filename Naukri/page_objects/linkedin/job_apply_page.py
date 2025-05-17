@@ -22,6 +22,9 @@ class LinkedinJobApplyPage:
         self.submit_application_button = LinkedInApplicationLocators.SUBMIT_APPLICATION
         self.close_application_process = LinkedInApplicationLocators.CLOSE_APPLICATION
         self.done_with_application = LinkedInApplicationLocators.DONE_WITH_APPLICATION
+        self.save_application = LinkedInApplicationLocators.SAVE_JOB
+        self.already_applied = LinkedInApplicationLocators.ALREADY_APPLIED
+        self.terms_and_conditions = LinkedInApplicationLocators.TERMS_AND_CONDITIONS
 
     def navigate_to_job_section(self):
         self.page.locator(self.job_apply_section).click()
@@ -47,8 +50,14 @@ class LinkedinJobApplyPage:
         self.page.locator(self.linkedin_job_post).nth(job_post).wait_for(state="visible")
         self.page.locator(self.linkedin_job_post).nth(job_post).click()
         time.sleep(2)
-        self.page.locator(self.linkedin_job_apply).first.wait_for(state="visible")
-        self.page.locator(self.linkedin_job_apply).first.click()
+
+        if self.page.locator(self.linkedin_job_apply).first.is_visible():
+            self.page.locator(self.linkedin_job_apply).first.click()
+
+        if self.page.locator(self.already_applied).first.is_visible():
+            self.page.locator(self.already_applied).first.click()
+            return
+
 
         time.sleep(1.5)
         while True:
@@ -56,22 +65,15 @@ class LinkedinJobApplyPage:
                 if self.page.locator(self.review_button).is_visible():
                     self.page.locator(self.review_button).click()
                     time.sleep(2)
+                if self.page.locator(self.terms_and_conditions).is_visible():
+                    self.page.locator(self.terms_and_conditions).click()
+                    time.sleep(2)
                 if self.page.locator(self.submit_application_button).is_visible():
                     self.page.locator(self.submit_application_button).click()
                     time.sleep(2)
                     self.page.locator(self.done_with_application).wait_for(state="visible")
                     self.page.locator(self.done_with_application).first.click()
                     break
-                elif self.page.locator(self.next_button).count() > 0:
-                    next_btn = self.page.locator(self.next_button).first
-                    next_btn.wait_for(state="visible")
-                    if next_btn.is_enabled():
-                        next_btn.click()
-                        print("[Info] Clicked 'Next' button.")
-                        time.sleep(1.5)
-                    else:
-                        print("[Warning] 'Next' button found but not enabled.")
-
                 error_icons_locators = self.page.locator(self.mandatory_not_filled_error)
                 error_icons_count = error_icons_locators.count()
                 if error_icons_count > 0:
@@ -90,12 +92,20 @@ class LinkedinJobApplyPage:
 
                         if answer:
                             input_field.fill(answer)
-                            print(f"[Info] Filled answer for: {question}")
                         else:
-                            print(f"[Unmapped Question] '{question}' - Skipping this job.")
+                            print(f"[Unmapped Question] '{question}'")
                             self.page.locator(self.close_application_process).first.click()
                             time.sleep(1)
+                            self.page.locator(self.save_application).first.click()
                             return
+                elif self.page.locator(self.next_button).count() > 0:
+                    next_btn = self.page.locator(self.next_button).first
+                    next_btn.wait_for(state="visible")
+                    if next_btn.is_enabled():
+                        next_btn.click()
+                        time.sleep(1.5)
+                    else:
+                        print("[Warning] 'Next' button found but not enabled.")
                 else:
                     print("[Info] No navigation button found. Exiting.")
                     # break

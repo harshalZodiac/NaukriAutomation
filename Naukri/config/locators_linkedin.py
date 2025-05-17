@@ -27,3 +27,6 @@ class LinkedInApplicationLocators:
     SUBMIT_APPLICATION = '//span[@class="artdeco-button__text" and text()="Submit application"]'
     CLOSE_APPLICATION = '[data-test-icon="close-medium"]'
     DONE_WITH_APPLICATION = '//span[text()="Done"]'
+    SAVE_JOB = '//span[text()="Save"]'
+    ALREADY_APPLIED = '[class="artdeco-inline-feedback__message"]'
+    TERMS_AND_CONDITIONS = '[data-test-text-selectable-option__label="I Agree Terms & Conditions"]'
