@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Added few more questions 3">
-      <change afterPath="$PROJECT_DIR$/iwfm_pipeline.yml" afterDir="false" />
+    <list default="true" id="849a781d-8612-4635-8aec-9afb027c974e" name="Changes" comment="Updating Linkedin apply-2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locators_linkedin.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/locators_linkedin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/linkedin/job_apply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/linkedin/job_apply_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     &quot;Python tests.Python tests for test_login.TestNaukri.test_naukri_view_profile.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_login.TestNaukri.test_profile_percentage_value.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_naukri.TestNaukriJobApply.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply.executor&quot;: &quot;Debug&quot;,
     &quot;Python tests.Python tests for test_naukri.TestNaukriLogin.test_update_profile_general_section.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests in test_linkedin.py.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
@@ -88,7 +90,7 @@
       <recent name="D:\PythonProject\Naukri" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply">
+  <component name="RunManager" selected="Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply">
     <configuration name="Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
@@ -134,6 +136,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_naukri.TestNaukriLogin.test_update_profile_general_section" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Naukri" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_naukri.TestNaukriLogin.test_update_profile_general_section&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test_linkedin.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Naukri" />
       <option name="ENV_FILES" value="" />
@@ -149,35 +166,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_naukri.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Naukri" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_naukri.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" />
-        <item itemvalue="Python tests.Python tests in test_naukri.py" />
-        <item itemvalue="Python tests.Python tests in test_linkedin.py" />
-        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply" />
         <item itemvalue="Python tests.Python tests for test_linkedin.TestLinkedinApply.test_linkedin_job_apply" />
+        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply.test_naukri_apply" />
+        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriJobApply" />
+        <item itemvalue="Python tests.Python tests for test_naukri.TestNaukriLogin.test_update_profile_general_section" />
+        <item itemvalue="Python tests.Python tests in test_linkedin.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-2ee2454479a3-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.122" />
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -397,7 +399,47 @@
       <option name="project" value="LOCAL" />
       <updated>1747373982021</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding referential .yml file">
+      <option name="closed" value="true" />
+      <created>1747377971615</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747377971615</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding question 3">
+      <option name="closed" value="true" />
+      <created>1747378887117</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1747378887117</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Updating Linkedin apply">
+      <option name="closed" value="true" />
+      <created>1747456698554</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747456698554</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Updating Linkedin apply-1">
+      <option name="closed" value="true" />
+      <created>1747479027770</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1747479027770</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Updating Linkedin apply-2">
+      <option name="closed" value="true" />
+      <created>1747479341195</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1747479341195</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,11 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding the first job post open method" />
-    <MESSAGE value="Applying to jobs" />
-    <MESSAGE value="Applying to jobs 2" />
-    <MESSAGE value="Correcting job post iteration" />
-    <MESSAGE value="Framework refactor" />
     <MESSAGE value="Applying role category and education filters" />
     <MESSAGE value="Updating the no of pages and job logic" />
     <MESSAGE value="Refactoring page folder and renaming class" />
@@ -437,6 +474,11 @@
     <MESSAGE value="Added few more questions 1" />
     <MESSAGE value="Added few more questions 2" />
     <MESSAGE value="Added few more questions 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added few more questions 3" />
+    <MESSAGE value="Adding referential .yml file" />
+    <MESSAGE value="Adding question 3" />
+    <MESSAGE value="Updating Linkedin apply" />
+    <MESSAGE value="Updating Linkedin apply-1" />
+    <MESSAGE value="Updating Linkedin apply-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating Linkedin apply-2" />
   </component>
 </project>

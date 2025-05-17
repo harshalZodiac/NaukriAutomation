@@ -30,3 +30,4 @@ class LinkedInApplicationLocators:
     SAVE_JOB = '//span[text()="Save"]'
     ALREADY_APPLIED = '[class="artdeco-inline-feedback__message"]'
     TERMS_AND_CONDITIONS = '[data-test-text-selectable-option__label="I Agree Terms & Conditions"]'
+    # CONTINUE_BUTTON = '//span[@class="artdeco-button__text" and text()="Continue"]'
